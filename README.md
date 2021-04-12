@@ -1,30 +1,6 @@
-# Getting Started with the Spotify Web API using Python
-Get up and running with the Spotify Web API using Python!
-
-This repo contains a small demo application which will authenticate with the Spotify API, list all of a user's playlists,
-list all of the tracks for a given playlist, and fetch the audio features for selected tracks in that playlist.
-It also allows you to search a track and list out the audio features specifically for that track.
-
-Feel free to fork this jawn and use it for your own hacks and stuff!
-
-#### [The Spotify Web API](https://developer.spotify.com/web-api/)
-The Spotify Web API allows applications to fetch lots of awesome data from the Spotify catalog, as well as manage
-a user's playlists and saved music.  Some examples of of info you get are:
-  - Track, artist, album, and playlist metadata and search
-  - High-level audio features for tracks
-  - In-depth audio analysis for tracks
-  - Featured playlists and new releases
-  - Music recommendations based on seed data
-
-#### [Spotipy](http://spotipy.readthedocs.io/en/latest/) ([github](https://github.com/plamere/spotipy))
-Spotipy is an awesome lightweight Python wrapper library for the Spotify Web API.  Using Spotipy, you can get any information
-that you can get through the raw Web API.  The library does a bunch of the heavy lifting for things like authenticating
-against the API, serializing request data, and deserialzing response data.
-
-
 ## Setup
 #### Register Your Application With Spotify
-In order to access certain features of the Web API, we need to tell spotify that we're a legitimate app.
+In order to access certain features of the Spotify Web API, we need to tell spotify that we're a legitimate app.
 To do this, go to https://developer.spotify.com/my-applications and create a new Application.
 
 For the Redirect URI, add `http://localhost/` - It should look like this:
@@ -47,12 +23,24 @@ To install this stuff, run
 ./setup.sh
 source ~/.bashrc
 ```
-_Note: If you approve, the setup script will add a line to your bashrc (your shell startup commands) which will
-automatically activate your virtual enviroment when you `cd` into this directory, setting your enviroment variables and
-using your isolated python environment._
+
+## Completing the Code
+Some parts of the project have been removed so you can complete them yourself. These parts are at lines:
+* *src/common.py*
+    1. line 78
+    2. line 91
+* *src/display_utils.py*
+    1. line 33
+    2. line 48
+    3. line 104
+* *src/main.py*
+    1. line 103
+
+You can complete these tasks using the skills you learned in this course, like loops, dictionaries, function calls, and lists (among others). Once you have completed these, you can run the project!
+
 
 ## Running
-To run the out of the box demo, simply run
+Simply run
 ```
 make run
 ```

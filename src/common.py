@@ -75,9 +75,11 @@ def fetch_artists(spotify, artists):
     batches = range(0, len(artists), batch_size)
     result = []
     for i in batches:
-        end = i+batch_size
-        print('Fetching artists {} - {}'.format(i, end))
-        chunk = spotify.artists(artists[i:end])
+        # make a variable called `end` and set it equal to i+batch_size
+        # using an f-string, print out the phrase "Fetching artists _ - _" where the first blank is i and the second blank is end
+        # make a variable called `artists_chunk` and set it equal to the items in the artists array from index i to index end
+        # make a variable called `chunk` and set it equal to calling spotify.artists(artists_chunk)
+        
         result = result + chunk.get('artists', [])
 
     return result
@@ -86,13 +88,5 @@ def fetch_artist_top_tracks(spotify, artists):
     """
     Get a large number of artists by chunking the requests
     """
-    batch_size = 50
-    batches = range(0, len(artists), batch_size)
-    result = []
-    for i in batches:
-        end = i+batch_size
-        print('Fetching artists {} - {}'.format(i, end))
-        chunk = spotify.artists(artists[i:end])
-        result = result + chunk.get('artists', [])
+    # return the result of calling the fetch_artists() function
 
-    return result

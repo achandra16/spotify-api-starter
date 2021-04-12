@@ -98,7 +98,9 @@ def get_audio_features(spotify, tracks, pretty_print=False):
         return
 
     # Build a map of id->track so we can get the full track info later
-    track_map = {track.get('id'): track for track in tracks}
+    track_map = {}
+    for track in tracks:
+        # map track.get('id') to `track` in the dictionary track_map
 
     # Request the audio features for the chosen tracks (limited to 50)
     print_header('Getting Audio Features...')

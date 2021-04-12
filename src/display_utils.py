@@ -26,8 +26,15 @@ def track_string(track):
     :return: A string describing the track
     """
     track_name = track.get('name')
-    artist_names = ', '.join([artist.get('name') for artist in track.get('artists', [])])
-    return '{} - {}'.format(track_name, artist_names)
+
+    artist_names_list = []
+    for artist in track.get('artists', []):
+        artist_name = artist.get('name')
+        # append artist_name to artist_names_list
+
+    # make a new variable called `artist_names` that joins all the strings in artist_names_list
+    # make a new f-string called `track_and_artist_names` that prints "_ - _" where the first blank is track_name and the second blank is artist_names
+    return track_and_artist_names
 
 
 def translate_key_to_pitch(key):
@@ -38,7 +45,7 @@ def translate_key_to_pitch(key):
     :return: The translated Pitch Class string
     """
     pitches = ['C', 'C♯/D♭', 'D', 'D♯/E♭', 'E', 'F', 'F♯/G♭', 'G', 'G♯/A♭', 'A', 'A♯/B♭', 'B']
-    return pitches[key]
+    # return the string at index `key`
 
 
 def print_audio_features_for_track(track, track_features):
@@ -93,8 +100,9 @@ def choose_tracks(tracks):
     selection of them.
     :return: A list of selected track objects
     """
-    for i, track in enumerate(tracks):
-        print('  {}) {}'.format(i + 1, track_string(track)))
+
+    # write a for loop that iterates through tracks
+    # in each iteration, print out "'  _) _'" (with correct spaces) where the first blank is index+1 and the second blank is track_string(track)
 
     # Choose some tracks
     track_choices = input('\nChoose some tracks (e.g 1,4,5,6,10): ')
